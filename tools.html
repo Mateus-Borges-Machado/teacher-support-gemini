@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferramentas de IA - Design Instrucional</title>
+
+    <!-- Google Fonts: Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./styles/tools.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand navbar-custom sticky-top">
+        <div class="container-fluid px-md-5">
+            <!-- Logo / Imagem à Esquerda -->
+            <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                <!-- Placeholder de Imagem de Logo -->
+                <img src="https://placehold.co/150x50/0088ff/ffffff?text=LOGO+IA" alt="Logo" class="rounded">
+            </a>
+
+            <!-- Botões à Direita -->
+            <div class="d-flex gap-2">
+                <!-- Botão Voltar -->
+                <a href="index.html" class="btn btn-nav rounded-pill d-flex align-items-center gap-2">
+                    <i class="bi bi-house-door"></i> <span class="d-none d-sm-inline">Início</span>
+                </a>
+
+                <!-- Botão Email -->
+                <a href="mailto:mateus.dev@brgsystem.com.br"
+                    class="btn btn-nav-primary d-flex align-items-center gap-2">
+                    <i class="bi bi-envelope"></i> <span class="d-none d-sm-inline">Contato/Suporte</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Container Central -->
+    <div class="container d-flex min-vh-100 justify-content-center align-items-center p-3">
+
+        <!-- Cartão Branco -->
+        <div class="card card-custom border-0 shadow-lg my-4">
+            <div class="card-body p-4 p-md-5">
+
+                <!-- Cabeçalho -->
+                <div class="text-center mb-4">
+                    <h2 class="mb-2">Menu de Ferramentas</h2>
+                    <p class="text-muted">Recursos de IA selecionados para a produção didática</p>
+                </div>
+
+                <!-- Lista de Ferramentas -->
+                <div class="tools-list">
+
+                    <!-- 1. Invideo AI -->
+                    <div class="tool-item">
+                        <div class="tool-title">
+                            <i class="bi bi-camera-video text-primary"></i> 1. Invideo AI
+                        </div>
+                        <p class="tool-desc">
+                            Geração de roteiros de vídeo focados (máx 2 min), com linguagem direta e instruções de
+                            'b-roll' técnico.
+                        </p>
+                        <a href="https://invideo.io/ai/" target="_blank" class="btn-link-tool">
+                            Acessar Invideo <i class="bi bi-box-arrow-up-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- 2. Prezi AI -->
+                    <div class="tool-item">
+                        <div class="tool-title">
+                            <i class="bi bi-easel text-primary"></i> 2. Prezi AI
+                        </div>
+                        <p class="tool-desc">
+                            Criação de estruturas de slides dinâmicos (máx 10 pontos), otimizados para tópicos curtos
+                            estilo 'copia e cola'.
+                        </p>
+                        <a href="https://prezi.com/pt/features/ai/" target="_blank" class="btn-link-tool">
+                            Acessar Prezi <i class="bi bi-box-arrow-up-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- 3. Murf AI -->
+                    <div class="tool-item">
+                        <div class="tool-title">
+                            <i class="bi bi-mic text-primary"></i> 3. Murf AI
+                        </div>
+                        <p class="tool-desc">
+                            Geração de roteiros de áudio e narração com foco na entonação para engajamento, respeitando
+                            limites de planos gratuitos.
+                        </p>
+                        <a href="https://murf.ai/" target="_blank" class="btn-link-tool">
+                            Acessar Murf <i class="bi bi-box-arrow-up-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- 4. Wayground AI (Nota: Assumindo placeholder pois a ferramenta pode ser específica/nicho) -->
+                    <div class="tool-item">
+                        <div class="tool-title">
+                            <i class="bi bi-puzzle text-primary"></i> 4. Wayground AI
+                        </div>
+                        <p class="tool-desc">
+                            Criação de Quizzes de aplicação prática focados em raciocínio de engenharia e lógica,
+                            evitando a "decoreba".
+                        </p>
+                        <a href="https://wayground.com/quizizz-ai?lng=pt-BR" class="btn-link-tool">
+                            Acessar Ferramenta <i class="bi bi-box-arrow-up-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- 5. Meshy / Tripo 3D -->
+                    <div class="tool-item">
+                        <div class="tool-title">
+                            <i class="bi bi-box text-primary"></i> 5. Meshy / Tripo 3D
+                        </div>
+                        <p class="tool-desc">
+                            Geração de prompts para arquivos STL. Foco em descrição visual técnica (geometria sólida,
+                            fundo neutro) para impressão 3D.
+                        </p>
+                        <div class="d-flex gap-2 flex-wrap">
+                            <a href="https://www.meshy.ai/" target="_blank" class="btn-link-tool">
+                                Acessar Meshy <i class="bi bi-box-arrow-up-right"></i>
+                            </a>
+                            <a href="https://www.tripo3d.ai/" target="_blank" class="btn-link-tool">
+                                Acessar Tripo <i class="bi bi-box-arrow-up-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 6. Gemini -->
+                    <div class="tool-item">
+                        <div class="tool-title">
+                            <i class="bi bi-stars text-primary"></i> 6. Gemini
+                        </div>
+                        <p class="tool-desc">
+                            Entrega de Material completo (conteúdo, exemplos, abordagens) para o professor utilizar
+                            durante a condução da aula.
+                        </p>
+                        <a href="https://gemini.google.com/" target="_blank" class="btn-link-tool">
+                            Acessar Gemini <i class="bi bi-box-arrow-up-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Frases e Observações -->
+                    <div class="tool-note">
+                        <i class="bi bi-info-circle text-info"></i> Lembre-se de revisar as limitações de cada
+                        ferramenta, especialmente em contas gratuitas.
+                    </div>
+                    <div class="tool-note">
+                        <i class="bi bi-info-circle text-info"></i> Após gerar o conteúdo, valide se atende às suas
+                        expectativas e faça ajustes conforme necessário e retorne para este site.
+                    </div>
+
+                </div>
+                <!-- Fim da Lista -->
+
+                <!-- Botão de Ação Inferior Esquerdo -->
+                <div class="mt-4 d-flex">
+                    <a href="./generator.html" class="btn btn-custom rounded-pill">
+                        Voltar <i class="bi bi-arrow-left"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
