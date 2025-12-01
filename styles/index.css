@@ -1,73 +1,65 @@
-/* Aplicação da Fonte e Cor de Fundo */
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #005fb3;
-    color: #333;
-    /* Cor de texto padrão suave */
-}
+        /* --- Estilos Globais e de Tema --- */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #0088ff;
+            color: #333;
+        }
 
-/* --- Navbar Customizada --- */
-.navbar-custom {
-    background-color: #ffffff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    padding: 0.8rem 1rem;
-}
+        /* --- Navbar Customizada --- */
+        .navbar-custom {
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 0.8rem 1rem;
+        }
 
-.navbar-brand img {
-    height: 40px;
-    width: auto;
-}
+        .navbar-brand img {
+            height: 40px;
+            width: auto;
+        }
 
-.btn-nav {
-    color: #0088ff;
-    font-weight: 500;
-    border: 1px solid transparent;
-    transition: all 0.2s;
-}
+        .btn-nav {
+            color: #0088ff;
+            font-weight: 500;
+            border: 1px solid transparent;
+            transition: all 0.2s;
+        }
 
-.btn-nav:hover {
-    color: #0066cc;
-    background-color: rgba(0, 136, 255, 0.05);
-    border-color: rgba(0, 136, 255, 0.1);
-}
+        .btn-nav:hover {
+            color: #0066cc;
+            background-color: rgba(0, 136, 255, 0.05);
+            border-color: rgba(0, 136, 255, 0.1);
+        }
 
-.btn-nav-primary {
-    background-color: #0088ff;
-    color: white;
-    border-radius: 50px;
-    padding: 6px 20px;
-}
+        .btn-nav-primary {
+            background-color: #0088ff;
+            color: white;
+            border-radius: 50px;
+            padding: 6px 20px;
+        }
+        
+        .btn-nav-primary:hover {
+            background-color: #0066cc;
+            color: white;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
 
-.btn-nav-primary:hover {
-    background-color: #0066cc;
-    color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+        /* --- Botão Principal --- */
+        .btn-custom {
+            background-color: #0088ff;
+            color: #ffffff;
+            border: none;
+            padding: 10px 24px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+        }
 
-/* Botão Personalizado */
-.btn-custom {
-    background-color: #005fb3;
-    color: #ffffff;
-    border: none;
-    padding: 10px 24px;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    /* Espaço entre texto e ícone */
-}
-
-/* Estado Hover do Botão */
-.btn-custom:hover {
-    background-color: #004a99;
-    /* Tom mais escuro */
-    color: #ffffff;
-    transform: translateY(-1px);
-    /* Ligeira elevação */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.btn-custom:active {
-    transform: translateY(0);
-}
+        .btn-custom:hover {
+            background-color: #0066cc;
+            color: #ffffff;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
