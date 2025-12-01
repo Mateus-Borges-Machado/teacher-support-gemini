@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,19 +8,81 @@
     <!-- Google Fonts: Roboto -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="./styles/index.css">
+    <style>
+        /* --- Estilos Globais e de Tema --- */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #0088ff;
+            color: #333;
+        }
 
+        /* --- Navbar Customizada --- */
+        .navbar-custom {
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 0.8rem 1rem;
+        }
 
+        .navbar-brand img {
+            height: 40px;
+            width: auto;
+        }
+
+        .btn-nav {
+            color: #0088ff;
+            font-weight: 500;
+            border: 1px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .btn-nav:hover {
+            color: #0066cc;
+            background-color: rgba(0, 136, 255, 0.05);
+            border-color: rgba(0, 136, 255, 0.1);
+        }
+
+        .btn-nav-primary {
+            background-color: #0088ff;
+            color: white;
+            border-radius: 50px;
+            padding: 6px 20px;
+        }
+        
+        .btn-nav-primary:hover {
+            background-color: #0066cc;
+            color: white;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        /* --- Botão Principal --- */
+        .btn-custom {
+            background-color: #0088ff;
+            color: #ffffff;
+            border: none;
+            padding: 10px 24px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+
+        .btn-custom:hover {
+            background-color: #0066cc;
+            color: #ffffff;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+    </style>
 </head>
-
 <body>
 
     <!-- Navbar -->
@@ -35,46 +96,66 @@
 
             <!-- Botões à Direita -->
             <div class="d-flex gap-2">
-                <!-- Botão Voltar -->
-                <a href="index.html" class="btn btn-nav rounded-pill d-flex align-items-center gap-2">
-                    <i class="bi bi-house-door"></i> <span class="d-none d-sm-inline">Início</span>
+                <!-- Botão Voltar (Desabilitado na Home) -->
+                <a href="#" class="btn btn-nav rounded-pill d-flex align-items-center gap-2 disabled">
+                    <i class="bi bi-house-door-fill"></i> <span class="d-none d-sm-inline">Início</span>
                 </a>
-
+                
                 <!-- Botão Email -->
-                <a href="mailto:mateus.dev@brgsystem.com.br"
-                    class="btn btn-nav-primary d-flex align-items-center gap-2">
+                <a href="mailto:mateus.dev@brgsystem.com.br" class="btn btn-nav-primary d-flex align-items-center gap-2">
                     <i class="bi bi-envelope"></i> <span class="d-none d-sm-inline">Contato/Suporte</span>
                 </a>
             </div>
         </div>
     </nav>
 
+    <!-- Container Principal -->
     <div class="container d-flex min-vh-100 justify-content-center align-items-center p-3">
-
-        <div class="card border-0 shadow-lg rounded-4" style="max-width: 500px; width: 100%;">
+        
+        <!-- Cartão de Boas-vindas -->
+        <div class="card border-0 shadow-lg rounded-4 my-4" style="max-width: 600px; width: 100%;">
             <div class="card-body p-4 p-md-5">
-
-                <h2 class="mb-4 fw-bold">Bem-vindo</h2>
-
-                <p class="text-muted">
+                
+                <h2 class="mb-4 fw-bold text-center text-md-start" style="color: #0088ff;">Bem-vindo</h2>
+                
+                <p class="text-muted text-center text-md-start">
                     Embora poderosas, as IAs podem ser imprecisas. Para garantir resultados de qualidade e previsíveis,
                     é essencial usar bons prompts (instruções).
                 </p>
-                <p class="text-muted">
+                <p class="text-muted text-center text-md-start mb-4">
                     Seguiremos um método específico para isso, utilizando o Gemini como principal aliado para criar os
                     comandos de todas as outras ferramentas.
                 </p>
 
-                <a href="./generator.html" class="btn btn-custom rounded-pill mt-4">
-                    Continuar <i class="bi bi-arrow-right"></i>
-                </a>
+                <!-- ALERTA DE INSTRUÇÃO RACIOCÍNIO (IMAGEM GRANDE EMBAIXO) -->
+                <div class="alert alert-warning border-start border-4 border-warning d-flex flex-column gap-3 mb-4 shadow-sm" role="alert">
+                    <!-- Texto -->
+                    <div class="w-100">
+                        <h6 class="alert-heading fw-bold mb-2 d-flex align-items-center">
+                            <i class="bi bi-lightbulb-fill me-2 text-warning"></i> Dica Importante
+                        </h6>
+                        <p class="mb-0">
+                            Para garantir a melhor qualidade e o cumprimento rigoroso do protocolo, <strong>ative a opção "Raciocínio"</strong> no Gemini antes de enviar o prompt, conforme mostrado abaixo:
+                        </p>
+                    </div>
+                    <!-- Imagem Grande (12 colunas / Full Width) -->
+                    <div class="w-100 text-center">
+                        <img src="images/instrucao_raciocinio.jpeg" alt="Ativar Raciocínio no Gemini" class="img-fluid rounded border border-secondary-subtle w-100 shadow-sm">
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-center justify-content-md-start">
+                    <a href="./generator.html" class="btn btn-custom rounded-pill mt-2">
+                        Continuar <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
 
             </div>
         </div>
 
     </div>
 
+    <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
