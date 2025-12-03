@@ -49,19 +49,21 @@
 
     <!-- Container Principal -->
     <div class="container d-flex min-vh-100 justify-content-center align-items-center p-3">
-
-        <!-- Cartão (Largura aumentada para max-width: 800px para melhor leitura) -->
+        
+        <!-- Cartão -->
         <div class="card border-0 shadow-lg rounded-4 my-4" style="max-width: 800px; width: 100%;">
             <div class="card-body p-4 p-md-5">
-
-                <!-- Cabeçalho do Card -->
+                
+                <!-- Cabeçalho -->
                 <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
-                    <h2 class="fw-bold m-0 text-primary" style="color: #0088ff !important;">Gerador de Prompt</h2>
-
-                    <!-- Ações de Topo -->
+                    <div>
+                        <h2 class="fw-bold m-0" style="color: #0088ff;">Configuração do Contexto</h2>
+                        <p class="text-muted small mb-0">Preencha os dados abaixo para gerar o prompt instrucional.</p>
+                    </div>
+                    
                     <div class="d-flex gap-2">
                         <button onclick="copyToClipboard()" class="btn btn-tool rounded-pill" id="btnCopy">
-                            <i class="bi bi-clipboard"></i> Copiar Prompt
+                            <i class="bi bi-clipboard"></i> Gerar e Copiar Prompt
                         </button>
                         <a href="https://gemini.google.com/" target="_blank" class="btn btn-tool rounded-pill">
                             <i class="bi bi-stars"></i> Abrir Gemini
@@ -69,116 +71,41 @@
                     </div>
                 </div>
 
-                <!-- Área de Texto com Inputs -->
-                <div class="prompt-text bg-light p-4 rounded-3 border">
-                    <p>
-                        Atue como meu <strong>Especialista Sênior em Design Instrucional e Engenharia de
-                            Prompts</strong>,
-                        focado exclusivamente no ensino universitário de
-                        <input type="text" id="inp_curso" class="input-inline" placeholder="ex: Engenharia Civil">.
-                        Sua missão é transformar materiais brutos em recursos didáticos multimídia de alta precisão,
-                        orquestrando ferramentas de IA externas.
-                    </p>
+                <!-- Formulário de Perguntas -->
+                <div class="bg-light p-4 rounded-3 border">
+                    
+                    <div class="row g-4">
+                        <!-- Pergunta 1: Contexto Educacional (Atualizado) -->
+                        <div class="col-12">
+                            <label for="inp_curso" class="form-label">1. Qual é o contexto educacional (Curso, Série ou Ano)?</label>
+                            <input type="text" class="form-control" id="inp_curso" placeholder="Ex: Matemática - Ensino Médio, Alfabetização, Engenharia Civil...">
+                            <div class="form-text">Defina a disciplina e o nível (Infantil, Fundamental, Médio ou Superior).</div>
+                        </div>
 
-                    <p><strong>Contexto do Aluno:</strong></p>
-                    <p>
-                        O público é
-                        <input type="text" id="inp_publico" class="input-inline" placeholder="ex: fixo ou variável">;
-                        estudantes de
-                        <input type="text" id="inp_perfil" class="input-inline"
-                            placeholder="ex: Exatas, focados em cálculo">,
-                        turmas
-                        <input type="text" id="inp_turmas" class="input-inline"
-                            placeholder="ex: Mistas (calouros/veteranos)">.
-                        A linguagem deve ser
-                        <input type="text" id="inp_linguagem" class="input-inline"
-                            placeholder="ex: Técnica mas acessível">,
-                        porém didática e desmistificadora.
-                    </p>
+                        <!-- Pergunta 2: Nível de Conhecimento -->
+                        <div class="col-md-6">
+                            <label for="inp_nivel" class="form-label">2. Qual o nível de conhecimento do público?</label>
+                            <select class="form-select" id="inp_nivel">
+                                <option value="" selected disabled>Selecione o nível...</option>
+                                <option value="Iniciante">Iniciante</option>
+                                <option value="Intermediário">Intermediário</option>
+                                <option value="Avançado">Avançado</option>
+                            </select>
+                        </div>
 
-                    <hr class="my-3">
+                        <!-- Pergunta 3: Linguagem -->
+                        <div class="col-md-6">
+                            <label for="inp_linguagem" class="form-label">3. Qual deve ser o tom da linguagem?</label>
+                            <input type="text" class="form-control" id="inp_linguagem" placeholder="Ex: Lúdica e visual, Técnica, Formal...">
+                        </div>
+                    </div>
 
-                    <p><strong>Seu Protocolo de Execução (Siga passo a passo):</strong></p>
-
-                    <p><strong>Fase 1: Ingestão e Estruturação</strong></p>
-                    <ol>
-                        <li>Se apresente brevemente e solicite o arquivo ou texto da aula.</li>
-                        <li>Analise o conteúdo e faça uma divisão do plano de ensino em, obrigatoriamente, <strong>dois
-                                blocos</strong>, com resumos claros e de maneira pedagógica para facilitar o ensino.
-                            Dentro de cada bloco, subdivide-o em unidades de aprendizagem (do iniciante ao avançado)
-                            para serem trabalhadas também de maneira pedagógica. Se a densidade do conteúdo exigir outra
-                            estrutura para melhor didática, sugira a alteração. Lembrando que um bloco pode abordar mais
-                            assuntos que o outro, porém eles devem possuir uma carga horária e tempo de conteúdo
-                            semelhante (desde que não acabe prejudicando no aprendizado).</li>
-                        <li><strong>PARE</strong> completamente e aguarde minha validação da estrutura. Não gere menus
-                            ou prompts ainda e se houver sugestões de melhoria nas subdivisões pode recomendar.</li>
-                    </ol>
-
-                    <p><strong>Fase 2: O Menu de Ferramentas</strong></p>
-                    <p>SOMENTE após eu aprovar a estrutura, exiba este menu e pergunte qual recurso gerar (posso
-                        escolher vários, um por vez):</p>
-                    <ul>
-                        <li><strong>1. Invideo AI:</strong> Roteiro de vídeo (Foco: máx 2 min, linguagem direta,
-                            instrução de 'b-roll' técnico).</li>
-                        <li><strong>2. Prezi AI:</strong> Estrutura de slides (Foco: máx 10 pontos, tópicos curtos
-                            'copia e cola').</li>
-                        <li><strong>3. Murf AI:</strong> Roteiro de áudio/narração (Foco: entonação para engajamento,
-                            respeitando limites gratuitos).</li>
-                        <li><strong>4. Wayground AI:</strong> Quiz de aplicação prática do conteúdo (Foco: raciocínio de
-                            engenharia, não 'decoreba' para validar se os alunos realmente entenderam o conteúdo).</li>
-                        <li><strong>5. Meshy/Tripo 3D:</strong> Prompt para arquivo STL (Foco: descrição visual técnica
-                            como 'geometria sólida', 'fundo neutro' para impressão 3D).</li>
-                        <li><strong>6. Gemini:</strong> Entrega de Material/ Apostila (conteúdo, exemplos, simulações,
-                            dinâmicas e abordagens para o professor utilizar durante a aula) (Foco: material completo de
-                            estudos contendo exemplos, abordagens, conteúdo e formas de conduzir a aula).</li>
-                    </ul>
-
-                    <p><strong>Fase 3: Geração de Prompts Otimizados</strong></p>
-                    <p>Ao gerar o prompt para a ferramenta escolhida, obedeça rigorosamente:</p>
-                    <ul>
-                        <li><strong>Idioma:</strong> A instrução final para a ferramenta deve estar em
-                            <strong>Português</strong> (para facilitar minha validação), a menos que a ferramenta exija
-                            inglês.</li>
-                        <li><strong>Formato:</strong> Coloque o prompt final OBRIGATORIAMENTE dentro de uma
-                            <code>Caixa de Código</code> (Code Block) para facilitar o 'copia e cola'.</li>
-                        <li><strong>Enriquecimento Automático:</strong> Para o item 5 (3D), adicione automaticamente
-                            termos técnicos visuais para garantir a qualidade do STL.</li>
-                        <li><strong>Limitações:</strong> Respeite as limitações de contas gratuitas (ex: tempo,
-                            quantidade de slides, dentre outras limitações existentes).</li>
-                        <li><strong>Interface de Interação:</strong> Considerar a interface de interação que o usuário
-                            deverá ter com as ferramentas, podendo ser necessário realização de pré-configurações ou
-                            ajustes antes de incluir o prompt/ roteiro. Dessa forma, todo o passo a passo de utilização,
-                            prompts e testes devem ser evidenciados, para garantir que não fique pontas soltas ou
-                            dúvidas no processo de manipulação das IAs (afinal o usuário não tem tanta afinidade com as
-                            ferramentas acima descritas).</li>
-                        <li><strong>Caso específico do Gemini:</strong> Nesta ferramenta específica (que seria o que
-                            está sendo utilizada no trabalho) o objetivo do professor NÃO É A GERAÇÃO DE PROMPTS, mas
-                            sim de trabalhar com mais especificidade cada módulo, trazendo conteúdo mais completo,
-                            referências, sugestões de leitura para os alunos, abordagens e exemplos para o professor
-                            utilizar durante a aula. Com esse material completo o professor poderá trazer um ainda mais
-                            profissionalismo e enriquecimento teórico para as suas aulas. Importante destacar que todo o
-                            material entregue deve seguir as normas ABNT, bem como todas as referências bibliográficas
-                            identificadas e representadas para dar os devidos créditos aos autores. Outro ponto
-                            importante é que, ao final do conteúdo, mostrar a média de tempo necessária para o professor
-                            repassar todo o conhecimento do material entregue, e questionar se é necessário o
-                            enriquecimento do conteúdo para mais tempo de aula ou resumir um pouco o conteúdo para
-                            diminuir o tempo de aula.</li>
-                    </ul>
-
-                    <p><strong>Validação:</strong><br>
-                        Após gerar o bloco de código, pergunte: <em>'Este prompt atende sua expectativa ou deseja
-                            refinar algum aspecto (ex: torná-lo mais matemático, mais visual)?'</em><br>
-                        Também é importante questionar o usuário após a seleção e recebimento da instrução de
-                        utilização da ferramenta selecionada, se o mesmo teve alguma dúvida ou dificuldade no processo.
-                        Caso possua, questione qual foi e se ofereça para resolver assim que o usuário inserir quais
-                        foram os problemas ou dúvidas que apareceram.</p>
-
-                    <p class="mt-3"><em>Comece agora se apresentando e solicitando o conteúdo da aula.</em></p>
                 </div>
 
-                <!-- Botão de Ação Inferior Esquerdo -->
-                <div class="mt-4 d-flex">
-                    <a href="./tools.html" class="btn btn-custom rounded-pill">
+                <!-- Botão Continuar -->
+                <div class="mt-4 d-flex justify-content-between align-items-center">
+                    <span class="text-muted small"><i class="bi bi-info-circle"></i> O prompt será gerado automaticamente ao clicar em "Copiar".</span>
+                    <a href="./ferramentas_ia.html" class="btn btn-custom rounded-pill">
                         Continuar <i class="bi bi-arrow-right"></i>
                     </a>
                 </div>

@@ -48,7 +48,7 @@
     </nav>
 
     <!-- Container Central -->
-    <div class="container d-flex min-vh-100 justify-content-center align-items-center p-3">
+    <div class="container d-flex justify-content-center align-items-center p-3" style="min-height: calc(100vh - 76px);">
 
         <!-- Cartão Branco -->
         <div class="card card-custom border-0 shadow-lg my-4">
@@ -58,16 +58,6 @@
                 <div class="text-center mb-4">
                     <h2 class="mb-2">Menu de Ferramentas</h2>
                     <p class="text-muted">Recursos de IA selecionados para a produção didática</p>
-
-                    <!-- Frases e Observações -->
-                    <div class="tool-note">
-                        <i class="bi bi-info-circle text-info"></i> Lembre-se de revisar as limitações de cada
-                        ferramenta, especialmente em contas gratuitas.
-                    </div>
-                    <div class="tool-note">
-                        <i class="bi bi-info-circle text-info"></i> Após gerar o conteúdo, valide se atende às suas
-                        expectativas e faça ajustes conforme necessário e retorne para este site.
-                    </div>
                 </div>
 
                 <!-- Lista de Ferramentas -->
@@ -87,18 +77,23 @@
                         </a>
                     </div>
 
-                    <!-- 2. Prezi AI -->
+                    <!-- 2. Prezi AI / Gamma (ATUALIZADO) -->
                     <div class="tool-item">
                         <div class="tool-title">
-                            <i class="bi bi-easel text-primary"></i> 2. Prezi AI
+                            <i class="bi bi-easel text-primary"></i> 2. Prezi AI / Gamma
                         </div>
                         <p class="tool-desc">
-                            Criação de estruturas de slides dinâmicos (máx 10 pontos), otimizados para tópicos curtos
-                            estilo 'copia e cola'.
+                            Criação de estruturas de slides dinâmicos e apresentações automáticas (máx 10 pontos),
+                            otimizados para tópicos curtos.
                         </p>
-                        <a href="https://prezi.com/pt/features/ai/" target="_blank" class="btn-link-tool">
-                            Acessar Prezi <i class="bi bi-box-arrow-up-right"></i>
-                        </a>
+                        <div class="d-flex gap-2 flex-wrap">
+                            <a href="https://prezi.com/ai/" target="_blank" class="btn-link-tool">
+                                Acessar Prezi <i class="bi bi-box-arrow-up-right"></i>
+                            </a>
+                            <a href="https://gamma.app/create/generate" target="_blank" class="btn-link-tool">
+                                Acessar Gamma <i class="bi bi-box-arrow-up-right"></i>
+                            </a>
+                        </div>
                     </div>
 
                     <!-- 3. Murf AI -->
@@ -115,7 +110,7 @@
                         </a>
                     </div>
 
-                    <!-- 4. Wayground AI (Nota: Assumindo placeholder pois a ferramenta pode ser específica/nicho) -->
+                    <!-- 4. Wayground AI -->
                     <div class="tool-item">
                         <div class="tool-title">
                             <i class="bi bi-puzzle text-primary"></i> 4. Wayground AI
@@ -124,7 +119,8 @@
                             Criação de Quizzes de aplicação prática focados em raciocínio de engenharia e lógica,
                             evitando a "decoreba".
                         </p>
-                        <a href="https://wayground.com/quizizz-ai?lng=pt-BR" class="btn-link-tool">
+                        <a href="#" class="btn-link-tool"
+                            onclick="alert('Certifique-se de ter o acesso correto a esta ferramenta específica.')">
                             Acessar Ferramenta <i class="bi bi-box-arrow-up-right"></i>
                         </a>
                     </div>
@@ -165,10 +161,10 @@
                 </div>
                 <!-- Fim da Lista -->
 
-                <!-- Botão de Ação Inferior Esquerdo -->
-                <div class="mt-4 d-flex">
+                <!-- Botão Voltar Inferior (Estilo Principal) -->
+                <div class="mt-5 d-flex">
                     <a href="./generator.html" class="btn btn-custom rounded-pill">
-                        Voltar <i class="bi bi-arrow-left"></i>
+                        <i class="bi bi-arrow-left"></i> Voltar
                     </a>
                 </div>
 
