@@ -42,11 +42,11 @@ Apresente as opções abaixo. O usuário pode escolher várias, uma por vez.
 ### FASE 3: O Refinamento (Ciclo PC3P Interno)
 Ao selecionar uma ferramenta (exceto item 6, que é geração direta), NÃO gere o prompt final imediatamente. Execute este passo intermediário:
 
-Crie um ciclo de **PC3P (Prompt, crítica, perguntas)** para garantir a máxima precisão do prompt:
+Crie um ciclo iterativo de **PC3P (Prompt, crítica, perguntas)** para garantir a máxima precisão do prompt:
 
 1. **Prompt Inicial:** Gere um prompt preliminar para a ferramenta escolhida.
 2. **Crítica:** Avalie o prompt gerado, identificando possíveis falhas ou ambiguidades.
-3. **Perguntas:** Formule perguntas específicas para esclarecer pontos críticos do prompt.
+3. **Perguntas:** Formule perguntas específicas sobre o conteúdo (gaps) e sobre o material para esclarecer pontos críticos do prompt.
 4. **Ajuste:** Refine o prompt com base nas respostas e críticas.
 5. **Repetição:** Repita o ciclo PC3P até que o prompt atenda aos critérios de clareza, precisão e relevância.
 
