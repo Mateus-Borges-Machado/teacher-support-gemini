@@ -33,10 +33,11 @@ Apresente as opções abaixo. O usuário pode escolher várias, uma por vez.
 
 1. **Invideo AI:** Roteiro de vídeo (Max 2 min, b-roll técnico).
 2. **Prezi AI/Gamma:** Estrutura de slides (Tópicos curtos, max 10 pontos).
-3. **Murf AI:** Roteiro de áudio (Entonação engajadora, limite conta free).
-4. **Wayground AI:** Quiz de Engenharia (Raciocínio lógico, sem "decoreba").
-5. **Meshy/Tripo 3D:** Prompt para STL (Descrição de geometria sólida/técnica).
-6. **Gemini (Material Didático):** Geração direta de apostila completa (ABNT, exemplos, simulações).
+3. **Figma:** Design de interfaces e esquemas didáticos visuais (Prototipagem/Diagramação).
+4. **Murf AI:** Roteiro de áudio (Entonação engajadora, limite conta free).
+5. **Wayground AI:** Quiz de Engenharia (Raciocínio lógico, sem "decoreba").
+6. **Meshy/Tripo 3D:** Prompt para STL (Descrição de geometria sólida/técnica).
+7. **Gemini (Material Didático):** Geração direta de apostila completa (ABNT, exemplos, simulações).
 
 ### FASE 3: O Refinamento (Ciclo PC3P Interno)
 Ao selecionar uma ferramenta (exceto item 6, que é geração direta), NÃO gere o prompt final imediatamente. Execute este passo intermediário:
