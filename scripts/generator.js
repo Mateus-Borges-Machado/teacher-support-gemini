@@ -2,12 +2,10 @@
 function copyToClipboard() {
     // Coletar valores dos inputs
     const curso = document.getElementById('inp_curso').value || "[INSIRA O CURSO]";
-    const publico = document.getElementById('inp_publico').value || "[TIPO DE PÚBLICO]";
-    const perfil = document.getElementById('inp_perfil').value || "[PERFIL DOS ALUNOS]";
-    const turmas = document.getElementById('inp_turmas').value || "[FAIXA ETÁRIA]";
+    const nivel = document.getElementById('inp_nivel').value || "Iniciante";
     const linguagem = document.getElementById('inp_linguagem').value || "[TIPO DE LINGUAGEM]";
 
-    if (curso === "[INSIRA O CURSO]" || publico === "[TIPO DE PÚBLICO]" || perfil === "[PERFIL DOS ALUNOS]" || turmas === "[FAIXA ETÁRIA]" || linguagem === "[TIPO DE LINGUAGEM]") {
+    if (curso === "[INSIRA O CURSO]" || linguagem === "[TIPO DE LINGUAGEM]" || nivel === "[SELECIONE O NÍVEL]") {
         alert("Por favor, preencha todos os campos antes de copiar o prompt.");
         return;
     }
